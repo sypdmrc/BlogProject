@@ -1,0 +1,22 @@
+#visited_hit{
+  background-color:#e1f0ff;
+}
+
+#visited_hit ul li {
+  margin-bottom: 0.3rem;
+}
+
+#visited_hit ul li a {
+
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.8);
+  color: #000;
+
+
+}
+
+#visited_hit ul li a:hover {
+
+  box-shadow: 2px 4px 4px 2px rgb(116, 116, 116);
+  color: rgb(28, 143, 243);
+
+}

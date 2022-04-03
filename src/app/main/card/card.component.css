@@ -1,0 +1,45 @@
+#title{
+  background-color:#e1f0ff;
+  padding: 0.5rem;
+}
+
+.left_side {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left_side:hover {
+  opacity: .9;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .8);
+}
+
+.left_side .card-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.left_side .card-text {
+  text-align: justify;
+  text-indent: 1rem;
+}
+
+.left_side img {
+
+  height: 25rem;
+
+}
+
+.footer-left{
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+.footer-left span{
+  margin-right: 2rem;
+}
+
+.footer-right{
+
+  float: right;
+}

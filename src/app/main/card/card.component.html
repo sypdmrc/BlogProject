@@ -1,0 +1,64 @@
+<div *ngIf="cards.length>0; else no_cards">
+
+  <h2 id="title" class="text-center mt-3" style="border:1px solid rgb(2, 1, 2)">{{title | titlecase}}</h2>
+
+  <div class="alert alert-primary mt-3">{{cards.length}} adet makale bulundu</div>
+
+  <ng-template [ngTemplateOutlet]="cardList"></ng-template>
+
+
+</div>
+
+<ng-template #cardList>
+
+  <div class="card left_side" *ngFor="let item of cards | cardFilter:filterText">
+    <img class="card-img-top" src="{{item.imageUrl}}" alt="resim yok">
+    <div class="card-body">
+      <h4 class="card-title">{{item.title}}</h4>
+      <p class="card-text line-clamp5">{{item.description | summary:400}}</p>
+    </div>
+
+    <div class="card-footer">
+
+      <div class="footer-items mt-2">
+
+        <div class="footer-left">
+
+          <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{item.datePublished | date:'mediumDate'}}
+          </span>
+          <span>
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+            {{item.category}}
+          </span>
+          <span>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            {{item.views}}
+          </span>
+          <span>
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+            {{item.comments}}
+          </span>
+        </div>
+        <div class="footer-right">
+
+          <button id="readMore" class="btn-sm btn-primary">Read More...</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</ng-template>
+
+<ng-template #no_cards>
+
+  <div class="alert alert-primary mt-3" >Herhangi Bir Cart Bulunamadı</div>
+
+</ng-template>
+

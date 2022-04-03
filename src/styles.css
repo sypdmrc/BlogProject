@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Inconsolata', monospace, 'PT Serif', serif;
+  background: #f3ecec;
+}
+
+.card {
+  border: 1px solid black;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+

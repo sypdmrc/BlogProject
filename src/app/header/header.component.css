@@ -1,0 +1,16 @@
+header {
+  background-image: url(../../assets/Images/blog-projesi-1.jpg);
+  background-size: cover;
+  background-position: 25% 50%;
+  height: 40rem;
+  z-index: -1;
+  opacity: 0.9;
+  padding-top: 15rem;
+}
+
+#header_h1,
+#header_p1 {
+  background: rgb(255 255 255);
+  color: black;
+  opacity: .6;
+}

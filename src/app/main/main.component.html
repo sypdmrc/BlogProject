@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-3 mt-2">
+    <app-categories></app-categories>
+  </div>
+    <div class="col-md-6">
+
+      <app-card></app-card>
+
+    </div>
+
+    <div class="col-md-3 mt-3">
+
+      <div id="search" class="card">
+
+
+
+        <div class="card-header text-center"><h5>Arama</h5></div>
+        <div class="card-body">
+          <input [(ngModel)]="filterText" type="text" placeholder="Arama..." class="form-control">
+
+
+        </div>
+      </div>
+
+      <app-visited></app-visited>
+
+      <app-cloud></app-cloud>
+
+    </div>
+
+
+
+  </div>
+</div>
