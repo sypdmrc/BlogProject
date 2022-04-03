@@ -1,11 +1,21 @@
 #allCategories {
   border: 1px solid black;
   color: black;
+
+}
+
+#allCategories a{
+  cursor: pointer;
 }
 
 #categories {
   border: 1px solid black;
   display: block;
   color: black;
+
+}
+
+#categories a{
+  cursor: pointer;
 }
 
