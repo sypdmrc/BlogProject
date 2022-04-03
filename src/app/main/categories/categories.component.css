@@ -1,12 +1,11 @@
-#categories{
-
-  background-color:#e1f0ff;
-}
-
-#categories li a{
+#allCategories {
+  border: 1px solid black;
   color: black;
 }
 
-#categories li a:hover{
-  color: rgb(28, 143, 243);
+#categories {
+  border: 1px solid black;
+  display: block;
+  color: black;
 }
+

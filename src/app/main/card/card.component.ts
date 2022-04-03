@@ -16,13 +16,13 @@ export class CardComponent implements OnInit {
 
   cards: Card[];
 
-  FilteredCards:Card[];
+  FilteredCards: Card[];
 
   popularCards: Card[];
 
   cardRepository: CardRepository;
 
-  filterCards:string="";
+  filterCards: string = "";
 
 
 
@@ -32,20 +32,31 @@ export class CardComponent implements OnInit {
     this.cardRepository = new CardRepository();
     this.cards = this.cardRepository.getCards();
     this.popularCards = this.cardRepository.getPopularCards();
-    this.FilteredCards=this.cards;
+    this.FilteredCards = this.cards;
 
   }
 
-  ngOnInit():void {
+  ngOnInit(): void {
 
   }
 
-  onInputChange(){
-    this.FilteredCards=this.filterCards?
-    this.cards.filter(c=>c.category.toLowerCase().indexOf(this.filterCards)!==-1 || c.category.indexOf(this.filterCards)!==-1):this.cards;
+  onInputChange() {
+    this.FilteredCards = this.filterCards ?
+      this.cards.filter(c => c.category.toLowerCase().indexOf(this.filterCards) !== -1 || c.category.indexOf(this.filterCards) !== -1) : this.cards;
   }
 
-
+  addToList($event:any,card: Card) {
+    if($event.target.classList.contains("btn-primary")){
+      $event.target.innerText = "Favorilerden Çıkar"
+      $event.target.classList.remove("btn-primary");
+      $event.target.classList.add("btn-danger");
+    }
+    else{
+      $event.target.innerText = "Favorilere Ekle"
+      $event.target.classList.remove("btn-danger");
+      $event.target.classList.add("btn-primary");
+    }
+  }
 
 
 
