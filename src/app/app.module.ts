@@ -13,6 +13,10 @@ import { CloudComponent } from './main/cloud/cloud.component';
 import { CategoriesComponent } from './main/categories/categories.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { FormsModule } from '@angular/forms';
+import { CardFilterPipe } from './pipes/card-filter.pipe';
+
+
+
 
 
 @NgModule({
@@ -27,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     VisitedComponent,
     CloudComponent,
     CategoriesComponent,
-    SummaryPipe
+    SummaryPipe,
+    CardFilterPipe,
+
   ],
   imports: [
     BrowserModule,

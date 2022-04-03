@@ -9,8 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  filterText:string="";
-
   constructor() { }
 
   ngOnInit(): void {

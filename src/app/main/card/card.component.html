@@ -2,16 +2,30 @@
 
   <h2 id="title" class="text-center mt-3" style="border:1px solid rgb(2, 1, 2)">{{title | titlecase}}</h2>
 
-  <div class="alert alert-primary mt-3">{{cards.length}} adet makale bulundu</div>
+  <div id="search" class="d-flex my-2 my-lg-0">
+    <input
+    [(ngModel)]="filterCards"
+    (ngModelChange)="onInputChange()"
+    id="searchInput"
+    class="form-control me-sm-2"
+    type="text" placeholder="Arama...">
+    <button onclick="getFilteredCards()" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+ </div>
+
+  <div class="alert alert-primary mt-3">{{FilteredCards.length}} adet makale bulundu</div>
 
   <ng-template [ngTemplateOutlet]="cardList"></ng-template>
 
 
 </div>
 
+
+
 <ng-template #cardList>
 
-  <div class="card left_side" *ngFor="let item of cards | cardFilter:filterText">
+
+
+  <div class="card left_side" *ngFor="let item of FilteredCards">
     <img class="card-img-top" src="{{item.imageUrl}}" alt="resim yok">
     <div class="card-body">
       <h4 class="card-title">{{item.title}}</h4>
