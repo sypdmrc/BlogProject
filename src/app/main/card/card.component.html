@@ -1,3 +1,7 @@
+<div class="alert alert-danger mt-3" *ngIf="error">
+  {{error.message}}
+</div>
+
 <div *ngIf="cards.length>0; else no_cards">
 
   <h2 id="title" class="text-center mt-3" style="border:1px solid rgb(2, 1, 2)">{{title | titlecase}}</h2>

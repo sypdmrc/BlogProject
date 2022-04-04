@@ -22,6 +22,8 @@ export class CardComponent implements OnInit {
 
   filterCards: string = "";
 
+  error: any;
+
 
 
 
@@ -35,13 +37,13 @@ export class CardComponent implements OnInit {
       this.cards = data;
 
       this.FilteredCards = this.cards;
-    })
+    },error=> this.error=error);
 
   }
 
   onInputChange() {
     this.FilteredCards = this.filterCards ?
-      this.cards.filter(c => c.category.toLowerCase().indexOf(this.filterCards) !== -1 || c.category.indexOf(this.filterCards) !== -1) : this.cards;
+      this.cards.filter(c => c.category.toLowerCase().startsWith(this.filterCards)) : this.cards;
   }
 
   addToList($event: any, card: Card) {

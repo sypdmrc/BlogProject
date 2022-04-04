@@ -6,7 +6,7 @@ import { Card } from "../models/card";
 @Injectable()
 export class CardService {
 
-  url = "http://localhost:3000/cards";
+  url = "http://localhost:3000/card";
 
   constructor(private http: HttpClient) { }
 
