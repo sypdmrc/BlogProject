@@ -19,3 +19,10 @@
   cursor: pointer;
 }
 
+#categories .card-body{
+  background-color:#e1f0ff;
+}
+
+#categories .card-header{
+  background-color:#e1f0ff;
+}
