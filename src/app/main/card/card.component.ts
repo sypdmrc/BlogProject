@@ -2,7 +2,7 @@ import { Component, OnInit, } from '@angular/core';
 import { Card } from 'src/app/models/card';
 import { CardRepository } from 'src/app/models/card.repository';
 
-
+declare let alertify:any;
 
 
 @Component({
