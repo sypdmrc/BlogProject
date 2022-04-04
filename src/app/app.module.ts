@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { CardFilterPipe } from './pipes/card-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -41,6 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
+
 
   ],
   providers: [
