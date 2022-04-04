@@ -19,10 +19,6 @@ export class CardComponent implements OnInit {
 
   FilteredCards: Card[];
 
-  popularCards: Card[];
-
-  cardRepository: CardRepository;
-
   filterCards: string = "";
 
 
@@ -30,9 +26,6 @@ export class CardComponent implements OnInit {
 
   constructor(private alertifyService: AlertifyService) {
 
-    this.cardRepository = new CardRepository();
-    this.cards = this.cardRepository.getCards();
-    this.popularCards = this.cardRepository.getPopularCards();
     this.FilteredCards = this.cards;
 
   }
