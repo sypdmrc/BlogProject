@@ -1,7 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, } from '@angular/core';
 import { Card } from 'src/app/models/card';
-import { CardRepository } from 'src/app/models/card.repository';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
 
@@ -25,14 +24,16 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor(private alertifyService: AlertifyService,private http:HttpClientModule) {
+  constructor(private alertifyService: AlertifyService, private http: HttpClient) {
 
     this.FilteredCards = this.cards;
 
   }
 
   ngOnInit(): void {
-
+    this.http.get<Card[]>("http://localhost:3000/cards").subscribe(data=>{
+      this.cards=data;
+    })
   }
 
   onInputChange() {
@@ -40,22 +41,22 @@ export class CardComponent implements OnInit {
       this.cards.filter(c => c.category.toLowerCase().indexOf(this.filterCards) !== -1 || c.category.indexOf(this.filterCards) !== -1) : this.cards;
   }
 
-  addToList($event:any,card: Card) {
-    if($event.target.classList.contains("btn-success")){
+  addToList($event: any, card: Card) {
+    if ($event.target.classList.contains("btn-success")) {
       $event.target.classList.remove("btn-success");
       $event.target.classList.add("btn-danger");
       $event.target.innerText = "Favorilerden Çıkar"
 
 
-      this.alertifyService.success(card.category+" favorilere eklendi")
+      this.alertifyService.success(card.category + " favorilere eklendi")
     }
-    else{
+    else {
       $event.target.classList.remove("btn-danger");
       $event.target.classList.add("btn-success");
       $event.target.innerText = "Favorilere Ekle"
 
 
-      this.alertifyService.error(card.category+" favorilerden çıkarıldı")
+      this.alertifyService.error(card.category + " favorilerden çıkarıldı")
     }
   }
 
