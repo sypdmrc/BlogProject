@@ -68,31 +68,31 @@
 
   "categories": [{
       "id": 1,
-      "name": "HTML"
+      "name": "html"
     },
     {
       "id": 2,
-      "name": "CSS"
+      "name": "css"
     },
     {
       "id": 3,
-      "name": "BOOTSTRAP"
+      "name": "bootstrap"
     },
     {
       "id": 4,
-      "name": "JAVASCRIPT"
+      "name": "javascript"
     },
     {
       "id": 5,
-      "name": "JQUERY"
+      "name": "jquery"
     },
     {
       "id": 6,
-      "name": "REACT"
+      "name": "react"
     },
     {
       "id": 7,
-      "name": "ANGULAR"
+      "name": "angular"
     }
   ]
 }
