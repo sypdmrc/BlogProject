@@ -15,9 +15,9 @@ export class CardComponent implements OnInit {
 
   title = "blog listesi";
 
-  cards: Card[];
+  cards: Card[]=[];
 
-  FilteredCards: Card[];
+  FilteredCards: Card[]=[];
 
   filterCards: string = "";
 
@@ -26,14 +26,16 @@ export class CardComponent implements OnInit {
 
   constructor(private alertifyService: AlertifyService, private http: HttpClient) {
 
-    this.FilteredCards = this.cards;
-
   }
 
   ngOnInit(): void {
-    this.http.get<Card[]>("http://localhost:3000/cards").subscribe(data=>{
-      this.cards=data;
+
+    this.http.get<Card[]>("http://localhost:3000/cards").subscribe(data => {
+      this.cards = data;
+
+      this.FilteredCards = this.cards;
     })
+
   }
 
   onInputChange() {
