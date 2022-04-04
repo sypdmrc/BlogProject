@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, } from '@angular/core';
 import { Card } from 'src/app/models/card';
 import { AlertifyService } from 'src/app/services/alertify.service';
+import { CardService } from 'src/app/services/card.service';
 
 
 
@@ -9,7 +9,8 @@ import { AlertifyService } from 'src/app/services/alertify.service';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
+  providers:[CardService]
 })
 export class CardComponent implements OnInit {
 
@@ -24,13 +25,13 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor(private alertifyService: AlertifyService, private http: HttpClient) {
+  constructor(private alertifyService: AlertifyService,private cardService: CardService) {
 
   }
 
   ngOnInit(): void {
 
-    this.http.get<Card[]>("http://localhost:3000/cards").subscribe(data => {
+    this.cardService.getCards().subscribe(data => {
       this.cards = data;
 
       this.FilteredCards = this.cards;
