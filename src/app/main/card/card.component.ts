@@ -1,8 +1,9 @@
 import { Component, OnInit, } from '@angular/core';
 import { Card } from 'src/app/models/card';
 import { CardRepository } from 'src/app/models/card.repository';
+import { AlertifyService } from 'src/app/services/alertify.service';
 
-declare let alertify:any;
+
 
 
 @Component({
@@ -27,7 +28,7 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor() {
+  constructor(private alertifyService: AlertifyService) {
 
     this.cardRepository = new CardRepository();
     this.cards = this.cardRepository.getCards();

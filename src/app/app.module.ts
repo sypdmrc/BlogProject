@@ -14,6 +14,7 @@ import { CategoriesComponent } from './main/categories/categories.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { FormsModule } from '@angular/forms';
 import { CardFilterPipe } from './pipes/card-filter.pipe';
+import { AlertifyService } from './services/alertify.service';
 
 
 
@@ -40,7 +41,9 @@ import { CardFilterPipe } from './pipes/card-filter.pipe';
     FormsModule,
 
   ],
-  providers: [],
+  providers: [
+    AlertifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
