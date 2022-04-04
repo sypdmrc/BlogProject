@@ -53,7 +53,7 @@ export class CardComponent implements OnInit {
       $event.target.innerText = "Favorilerden Çıkar"
 
 
-      alertify.success(card.category + " favorilere eklendi")
+      this.alertifyService.success(card.category+" favorilere eklendi")
     }
     else{
       $event.target.classList.remove("btn-danger");
@@ -61,7 +61,7 @@ export class CardComponent implements OnInit {
       $event.target.innerText = "Favorilere Ekle"
 
 
-      alertify.error(card.category + " favorilerden çıkarıldı")
+      this.alertifyService.error(card.category+" favorilerden çıkarıldı")
     }
   }
 
