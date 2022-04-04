@@ -37,9 +37,11 @@ export class CardComponent implements OnInit {
       this.cards = data;
 
       this.FilteredCards = this.cards;
-    },error=> this.error=error);
+    },error=> {
+      this.error=error
 
-  }
+   })
+}
 
   onInputChange() {
     this.FilteredCards = this.filterCards ?

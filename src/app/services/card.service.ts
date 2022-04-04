@@ -1,17 +1,44 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { catchError, Observable, tap, throwError } from "rxjs";
 import { Card } from "../models/card";
 
 @Injectable()
 export class CardService {
 
-  url = "http://localhost:3000/card";
+  url = "http://localhost:3000/cards";
 
   constructor(private http: HttpClient) { }
 
   getCards(): Observable<Card[]> {
     return this.http.get<Card[]>(this.url)
+      .pipe(
+        tap(data => console.log(data)),
+        catchError(this.handleError),
+      )
   }
 
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      //client ya da network
+      return throwError(error.error.message)
+    }
+    else {
+      //backend
+      switch (error.status) {
+        case 404:
+          return throwError("404 Not Found");
+
+        case 403:
+          return throwError("Erişmek istediğiniz alana yetkiniz yok")
+
+        case 500:
+          return throwError("Server hatası")
+
+        default:
+          return throwError("Bilinmeyen bir hata oluştu")
+      }
+    }
+
+  }
 }
