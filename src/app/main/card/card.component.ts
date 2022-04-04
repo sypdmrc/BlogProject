@@ -50,11 +50,15 @@ export class CardComponent implements OnInit {
       $event.target.innerText = "Favorilerden Çıkar"
       $event.target.classList.remove("btn-primary");
       $event.target.classList.add("btn-danger");
+
+      alertify.success(card.category+" favorilere eklendi")
     }
     else{
       $event.target.innerText = "Favorilere Ekle"
       $event.target.classList.remove("btn-danger");
       $event.target.classList.add("btn-primary");
+
+      alertify.error(card.category+" favorilerden çıkarıldı")
     }
   }
 
