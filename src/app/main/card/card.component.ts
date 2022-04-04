@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, } from '@angular/core';
 import { Card } from 'src/app/models/card';
 import { CardRepository } from 'src/app/models/card.repository';
@@ -24,7 +25,7 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor(private alertifyService: AlertifyService) {
+  constructor(private alertifyService: AlertifyService,private http:HttpClientModule) {
 
     this.FilteredCards = this.cards;
 
