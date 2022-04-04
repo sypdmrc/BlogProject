@@ -1,0 +1,98 @@
+{
+  "cards": [{
+      "id": 1,
+      "imageUrl": "../../assets/Images/blog-projesi-6.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "HTML",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 2,
+      "imageUrl": "../../assets/Images/blog-projesi-5.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "CSS",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 3,
+      "imageUrl": "../../assets/Images/blog-projesi-4.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "BOOTSTRAP",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 4,
+      "imageUrl": "../../assets/Images/blog-projesi-3.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "JAVASCRIPT",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 5,
+      "imageUrl": "../../assets/Images/blog-projesi-2.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "JQUERY",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 6,
+      "imageUrl": "../../assets/Images/blog-projesi-1.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "REACT",
+      "views": 0,
+      "comments": 0
+    },
+    {
+      "id": 7,
+      "imageUrl": "../../assets/Images/blog-projesi-5.jpg",
+      "title": "html Lorem, ipsum dolor.",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit  Dolorum labore numquam excepturi unde architecto expedita quod accusamus repudiandae eum magni dolorem nobis sint commodi voluptatum accusantium, molestiae cupiditate iusto possimus Corporis temporibus reiciendis ullam maiores natus. Magnam inventore consectetur natus minus! In doloribus vero non, ut veritatis optio, sequi quod repudiandae impedit excepturi iure similique blanditiis illo maiores possimus sunt Incidunt dolore reiciendis, unde ullam atque sunt odit, fugiat pariatur fugit quo debitis. A facilis, laudantium asperiores sapiente voluptatem, fugiat magnam debitis at molestias adipisci ullam necessitatibus reprehenderit. Accusantium, culpa.Doloribus voluptas sed possimus aut accusantium temporibus consequatur natus, eveniet quas? Ut, et dicta laboriosam facilis nostrum veritatis molestiae praesentium inventore totam? Quos autem temporibus praesentium? Nostrum vero accusamus ea. Qui minus officiis fugit quaerat id quam corporis architecto sunt suscipit! Alias, sit    dicta dolorum laborum error necessitatibus tempora sequi ad doloremque assumenda  dignissimos. Impedit vitae veniam eum nulla enim.",
+      "category": "ANGULAR",
+      "views": 0,
+      "comments": 0
+    }
+  ],
+
+
+
+  "categories": [{
+      "id": 1,
+      "name": "HTML"
+    },
+    {
+      "id": 2,
+      "name": "CSS"
+    },
+    {
+      "id": 3,
+      "name": "BOOTSTRAP"
+    },
+    {
+      "id": 4,
+      "name": "JAVASCRIPT"
+    },
+    {
+      "id": 5,
+      "name": "JQUERY"
+    },
+    {
+      "id": 6,
+      "name": "REACT"
+    },
+    {
+      "id": 7,
+      "name": "ANGULAR"
+    }
+  ]
+}
