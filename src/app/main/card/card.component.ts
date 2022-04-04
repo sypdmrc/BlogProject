@@ -46,19 +46,21 @@ export class CardComponent implements OnInit {
   }
 
   addToList($event:any,card: Card) {
-    if($event.target.classList.contains("btn-primary")){
-      $event.target.innerText = "Favorilerden Çıkar"
-      $event.target.classList.remove("btn-primary");
+    if($event.target.classList.contains("btn-success")){
+      $event.target.classList.remove("btn-success");
       $event.target.classList.add("btn-danger");
+      $event.target.innerText = "Favorilerden Çıkar"
 
-      alertify.success(card.category+" favorilere eklendi")
+
+      alertify.success(card.category + " favorilere eklendi")
     }
     else{
-      $event.target.innerText = "Favorilere Ekle"
       $event.target.classList.remove("btn-danger");
-      $event.target.classList.add("btn-primary");
+      $event.target.classList.add("btn-success");
+      $event.target.innerText = "Favorilere Ekle"
 
-      alertify.error(card.category+" favorilerden çıkarıldı")
+
+      alertify.error(card.category + " favorilerden çıkarıldı")
     }
   }
 
