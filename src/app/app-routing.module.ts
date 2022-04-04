@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { CardComponent } from './main/card/card.component';
 
 
 const routes: Routes = [
 
-  { path: "anasayfa", component: AppComponent },
-  { path: "", redirectTo: "anasayfa", pathMatch: "full" }
+  { path: "home", component: AppComponent },
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "home/category/:category", component: CardComponent }
 
 ]
 
