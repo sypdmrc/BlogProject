@@ -1,6 +1,6 @@
 footer {
   height: 15rem;
-  background-color: rgb(90, 89, 89);
+  background-color: #89bff5;
 }
 
 footer hr {
@@ -9,7 +9,7 @@ footer hr {
 }
 
 footer ul li a {
-  color: rgb(167, 167, 167);
+  color: #fff;
 }
 
 .footer_info {
@@ -21,7 +21,7 @@ footer ul li a {
 }
 
 .footer_info li a:hover {
-  color: rgb(255, 255, 255);
+  color:  #0d6efd;
 
 
 
@@ -48,7 +48,7 @@ footer ul li a {
 }
 
 .footer_icons div a:hover{
-  color: white;
+  color:  #0d6efd;
 
 }
 
@@ -59,7 +59,7 @@ footer ul li a {
 
 
 .footer_icons a {
-  color: rgb(167, 167, 167);
+  color: #fff;
   margin-left: 0.5rem;
 
 }
@@ -70,6 +70,10 @@ footer ul li a {
 
 .footer_p {
   text-align: center;
+}
+
+#textBottom{
+  color: rgb(236, 236, 236);
 }
 
 
