@@ -1,12 +1,36 @@
+#logo{
+  color: black !important;
+}
+
+#logo:hover{
+  color: rgb(255, 255, 255)!important;
+}
+
 #navbar {
-  background-color: #74a9df !important;
+  background-color: #89bff5!important;
   border: 1px solid white;
 }
 
-#navbar #collapsibleNavId li:hover {
-  background-color: rgb(206, 200, 200);
+#navbar #collapsibleNavId li a {
+  color: rgb(0, 0, 0) !important;
+
+
 }
 
-#navbar #collapsibleNavId li a {
-  color: white !important;
+#navbar #collapsibleNavId li a:hover {
+
+  color: rgb(255, 255, 255)!important;
 }
+
+#registerLink:hover{
+  background-color: #89bff5!important;
+}
+
+#loginLink:hover{
+  background-color: #89bff5!important;
+}
+
+
+
+
+

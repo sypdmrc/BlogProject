@@ -1,5 +1,5 @@
 header {
-  background-image: url(../../assets/Images/blog-projesi-1.jpg);
+  background-image: url(../../assets/Images/blog-projesi-2.jpg);
   background-size: cover;
   background-position: 25% 50%;
   height: 40rem;
@@ -12,5 +12,5 @@ header {
 #header_p1 {
   background: rgb(255 255 255);
   color: black;
-  opacity: .6;
+  opacity: .8;
 }

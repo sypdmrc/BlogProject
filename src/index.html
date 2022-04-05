@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>BlogProject</title>
@@ -7,13 +8,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-   <!-- font-awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-   <!-- google font -->
-   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=PT+Serif&display=swap" rel="stylesheet">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=PT+Serif&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <app-root></app-root>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <script>
+
+    $(document).ready(function(){
+
+      var btn = $('#button');
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 250) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: 0
+      }, '250');
+    });
+
+    })
+
+
+  </script>
+
+
+
 </body>
+
 </html>

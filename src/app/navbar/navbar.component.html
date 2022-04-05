@@ -1,179 +1,174 @@
 <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container">
 
-      <a class="navbar-brand" href="/">LOGO</a>
+    <a id="logo" class="navbar-brand" href="/">LOGO</a>
 
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/home">Anasayfa <span class="visually-hidden">(current)</span></a>
-              </li>
-
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/cards">Cartlar</a>
-          </li>
-          </ul>
-
-          <ul class="navbar-nav mt-2 mt-lg-0">
-
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                      Üye
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#register" href="#">
-                          <i class="fa fa-user-plus" aria-hidden="true"></i>
-                          <span class="ms-1">Üye Ol</span>
-                        </a>
-                      <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#login" href="#">
-                          <i class="fa fa-sign-in" aria-hidden="true"></i>
-                          <span class="ms-2">Üye Giriş</span>
-
-                      </a>
-                  </div>
-              </li>
-
-          </ul>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Anasayfa <span class="visually-hidden">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cards">Cartlar</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mt-2 mt-lg-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            Üye
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a id="registerLink" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#register" href="#">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              <span class="ms-1">Üye Ol</span>
+            </a>
+            <a id="loginLink" class="dropdown-item " data-bs-toggle="modal" data-bs-target="#login" href="#">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <span class="ms-2">Üye Giriş</span>
+
+            </a>
+          </div>
+        </li>
+
+      </ul>
 
 
-      </div>
+
+
+    </div>
   </div>
 </nav>
 
 
 
- <!-- Modal Register Start -->
+<!-- Modal Register Start -->
 
- <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
   <div class="modal-dialog" role="document">
-      <div class="modal-content">
+    <div class="modal-content">
 
-          <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Üye Ol</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Üye Ol</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
-          <div class="modal-body">
-
-
-
-              <div class="form-group">
-
-                  <div class="register_fullName mb-2">
-                      <label for="registerfullName">Ad Soyad</label>
-                      <input id="registerfullName" type="text" name="registerfullName" class="form-control">
-
-                  </div>
+      <div class="modal-body">
 
 
-                  <div class="register_email mb-2">
-                      <label for="registerEmail">Email</label>
-                      <input id="registerEmail" type="text" name="registerEmail" class="form-control">
-                  </div>
 
-                  <div class="register_password mb-2">
-                      <label for="registerPassword">Şifre</label>
-                      <input id="registerPassword" type="password" name="registerPassword" class="form-control">
+        <div class="form-group">
 
-                  </div>
-
-                  <div class="register_repassword">
-                      <label for="registerRePassword">Şifre Tekrarı</label>
-                      <input id="registerRePassword" type="password" name="registerRePassword"
-                          class="form-control">
-
-                  </div>
-
-              </div>
-
-              <div class="mt-2">
-
-                  <input type="submit" id="registerBtn" class="btn btn-primary text-uppercase" value="Gönder">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-              </div>
-
+          <div class="register_fullName mb-2">
+            <label for="registerfullName">Ad Soyad</label>
+            <input id="registerfullName" type="text" name="registerfullName" class="form-control">
 
           </div>
 
 
+          <div class="register_email mb-2">
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" type="text" name="registerEmail" class="form-control">
+          </div>
 
+          <div class="register_password mb-2">
+            <label for="registerPassword">Şifre</label>
+            <input id="registerPassword" type="password" name="registerPassword" class="form-control">
 
+          </div>
+
+          <div class="register_repassword">
+            <label for="registerRePassword">Şifre Tekrarı</label>
+            <input id="registerRePassword" type="password" name="registerRePassword" class="form-control">
+
+          </div>
+
+        </div>
+
+        <div class="mt-2">
+
+          <input type="submit" id="registerBtn" class="btn btn-primary text-uppercase" value="Gönder">
+          <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal">Kapat</button>
+        </div>
 
 
       </div>
+
+
+
+
+
+
+    </div>
   </div>
 </div>
 
 <!-- Modal Register End -->
 
-  <!-- Modal Login Start -->
+<!-- Modal Login Start -->
 
-  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
 
-    <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document">
 
-        <div class="modal-content">
+    <div class="modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title">
+      <div class="modal-header">
+        <h5 class="modal-title">
 
-                    Üye Girişi
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-
-            <div class="modal-body">
+          Üye Girişi
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
 
-                <div class="form-group">
-
-                    <div class="login_email mb-2">
-
-                        <label for="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" name="loginEmail" class="form-control">
-
-                    </div>
-
-                    <div class="login_password">
-
-                        <label for="loginPassword">Şifre</label>
-                        <input type="password" id="loginPassword" name="loginPassword" class="form-control">
-
-                    </div>
-
-                </div>
-
-                <div class="mt-2">
+      <div class="modal-body">
 
 
-                    <input id="loginBtn" type="submit" class="btn btn-primary text-uppercase" value="gönder">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                </div>
+        <div class="form-group">
 
-            </div>
+          <div class="login_email mb-2">
 
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="loginEmail" class="form-control">
 
+          </div>
 
+          <div class="login_password">
 
+            <label for="loginPassword">Şifre</label>
+            <input type="password" id="loginPassword" name="loginPassword" class="form-control">
+
+          </div>
 
         </div>
+
+        <div class="mt-2">
+
+
+          <input id="loginBtn" type="submit" class="btn btn-primary text-uppercase" value="gönder">
+          <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal">Kapat</button>
+        </div>
+
+      </div>
+
+
+
+
+
     </div>
+  </div>
 </div>
 
 <!-- Modal Login End -->
-
-
-
-

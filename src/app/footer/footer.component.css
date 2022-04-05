@@ -74,22 +74,40 @@ footer ul li a {
 
 
 
-
-#up{
-  padding: 10px 20px;
-  background-color: #74a9df ;
-  color: #fff;
+#button {
+  display: inline-block;
+  background-color: #89bff5;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
   position: fixed;
-  right: 10px;
-  bottom: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 1s;
+  bottom: 1rem;
+  right: 1rem;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
 }
-
-#up:hover {
-  color: #74a9df;
-  background-color: #fff;
-
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #0d6efd;
 
 }
+#button:active {
+  background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+  }
