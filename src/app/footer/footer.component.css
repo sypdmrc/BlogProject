@@ -77,7 +77,7 @@ footer ul li a {
 
 #up{
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #74a9df ;
   color: #fff;
   position: fixed;
   right: 10px;
@@ -88,7 +88,7 @@ footer ul li a {
 }
 
 #up:hover {
-  color: #000;
+  color: #74a9df;
   background-color: #fff;
 
 

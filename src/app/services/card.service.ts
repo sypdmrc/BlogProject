@@ -10,12 +10,27 @@ export class CardService {
 
   constructor(private http: HttpClient) { }
 
-  getCards(): Observable<Card[]> {
-    return this.http.get<Card[]>(this.url)
+  getCards(category: string): Observable<Card[]> {
+
+    let newUrl = this.url;
+
+    if (category) {
+      newUrl += "?category=" + category
+    }
+
+
+    return this.http.get<Card[]>(newUrl)
       .pipe(
         tap(data => console.log(data)),
         catchError(this.handleError),
       )
+  }
+
+  getCardById(cardId: number): Observable<Card> {
+    return this.http.get<Card>(this.url + "/" + cardId).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError),
+    )
   }
 
   private handleError(error: HttpErrorResponse) {

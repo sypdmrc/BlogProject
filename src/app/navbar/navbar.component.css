@@ -1,7 +1,12 @@
-#navbar{
-  background-color:#74a9df!important;
+#navbar {
+  background-color: #74a9df !important;
+  border: 1px solid white;
 }
 
-#navbar #collapsibleNavId li a{
-  color: white!important;
+#navbar #collapsibleNavId li:hover {
+  background-color: rgb(206, 200, 200);
+}
+
+#navbar #collapsibleNavId li a {
+  color: white !important;
 }

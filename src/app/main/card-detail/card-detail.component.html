@@ -1,1 +1,48 @@
-<p>card-detail works!</p>
+<div *ngIf="card else no_card">
+  <div class="card cardItem mt-3">
+    <img class="card-img-top" src="{{card.imageUrl}}" alt="resim yok">
+    <div class="card-body">
+      <h4 class="card-title">{{card.title}}</h4>
+      <p class="card-text">{{card.description}}</p>
+    </div>
+
+    <div class="card-footer">
+
+      <div class="footer-items mt-2">
+
+        <div class="footer-left">
+
+          <!-- <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{item.datePublished | date:'mediumDate'}}
+          </span> -->
+          <span>
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+            {{card.category | uppercase}}
+          </span>
+          <span>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            {{card.views}}
+          </span>
+          <span>
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+            {{card.comments}}
+          </span>
+        </div>
+
+        <div class="footer-right mb-2">
+
+          <a id="addToList" (click)="addToList($event,card)" class="btn-sm btn-success">Favorilere Ekle</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <ng-template #no_card>
+
+      <div class="alert alert-primary mt-3">Herhangi Bir Cart Bulunamadı</div>
+
+    </ng-template>

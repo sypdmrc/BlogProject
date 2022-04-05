@@ -1,4 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Card } from 'src/app/models/card';
 import { AlertifyService } from 'src/app/services/alertify.service';
 import { CardService } from 'src/app/services/card.service';
@@ -10,15 +11,15 @@ import { CardService } from 'src/app/services/card.service';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  providers:[CardService]
+  providers: [CardService]
 })
 export class CardComponent implements OnInit {
 
   title = "blog listesi";
 
-  cards: Card[]=[];
+  cards: Card[] = [];
 
-  FilteredCards: Card[]=[];
+  FilteredCards: Card[] = [];
 
   filterCards: string = "";
 
@@ -27,21 +28,27 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor(private alertifyService: AlertifyService,private cardService: CardService) {
+  constructor(private alertifyService: AlertifyService, private cardService: CardService, private activatedRoute: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
 
-    this.cardService.getCards().subscribe(data => {
-      this.cards = data;
+    this.activatedRoute.params.subscribe(params => {
 
-      this.FilteredCards = this.cards;
-    },error=> {
-      this.error=error
+      this.cardService.getCards(params["category"]).subscribe(data => {
+        this.cards = data;
 
-   })
-}
+        this.FilteredCards = this.cards;
+      }, error => {
+        this.error = error
+
+      })
+
+    })
+
+
+  }
 
   onInputChange() {
     this.FilteredCards = this.filterCards ?
@@ -55,7 +62,7 @@ export class CardComponent implements OnInit {
       $event.target.innerText = "Favorilerden Çıkar"
 
 
-      this.alertifyService.success(card.category + " favorilere eklendi")
+      this.alertifyService.success(card.category.toUpperCase() + " favorilere eklendi")
     }
     else {
       $event.target.classList.remove("btn-danger");
@@ -63,7 +70,7 @@ export class CardComponent implements OnInit {
       $event.target.innerText = "Favorilere Ekle"
 
 
-      this.alertifyService.error(card.category + " favorilerden çıkarıldı")
+      this.alertifyService.error(card.category.toUpperCase() + " favorilerden çıkarıldı")
     }
   }
 

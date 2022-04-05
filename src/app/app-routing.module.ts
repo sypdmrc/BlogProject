@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { CardDetailComponent } from './main/card-detail/card-detail.component';
 import { CardComponent } from './main/card/card.component';
 
 
 const routes: Routes = [
-
-  { path: "home", component: AppComponent },
+  { path: "home", component: CardComponent },
+  { path: "cards", component: CardComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home/category/:category", component: CardComponent }
+  { path: "cards/category/:category", component: CardComponent },
+  { path: "cards/:cardId", component: CardDetailComponent }
 
 ]
 
