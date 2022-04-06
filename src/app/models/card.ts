@@ -6,7 +6,7 @@ export interface Card{
   description:string,
   views:number,
   comments:number,
-  datePublished:Date,
+  datePublished:number,
   imageUrl:string,
   isPopular:boolean,
 
