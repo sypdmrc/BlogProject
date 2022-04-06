@@ -17,6 +17,7 @@ import { CardFilterPipe } from './pipes/card-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { CardCreateComponent } from './card-create/card-create.component';
 
 
 
@@ -37,6 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     CategoriesComponent,
     SummaryPipe,
     CardFilterPipe,
+    CardCreateComponent,
 
   ],
   imports: [

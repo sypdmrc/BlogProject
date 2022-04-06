@@ -1,0 +1,35 @@
+<div class="container mt-3">
+
+  <h2 class="text-center">Create Card</h2>
+
+  <form>
+
+  <div id="cardTitle" class="mb-2">
+    <label class="form-label mb-1" for="card-title" id="card-title" name="card-title">Card Title</label>
+    <input #title class="form-control" type="text" id="card-title" name="card-title">
+  </div>
+
+  <div id="cardDescription" class="mb-2">
+    <label class="form-label mb-1" for="card-description" id="card-description" name="card-description">Card Description</label>
+    <textarea #description class="form-control" type="text" id="card-description" name="card-description"></textarea>
+  </div>
+
+  <div id="cardImage" class="mb-2">
+    <label class="form-label mb-1" for="card-image" id="card-image" name="card-image">Card Image</label>
+    <input #imageUrl class="form-control" type="text" id="card-image" name="card-image">
+  </div>
+
+
+  <div id="cardCategory" class="mb-3">
+    <label class="form-label mb-1" for="card-category" id="card-category" name="card-category">Card Category</label>
+    <select #category name="card-category" id="card-category" class="form-select">
+      <option *ngFor="let item of categories" [value]="item.name">{{item.name | uppercase}}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="createCard(title,description,imageUrl,category)">Create</button>
+
+</form>
+
+
+</div>

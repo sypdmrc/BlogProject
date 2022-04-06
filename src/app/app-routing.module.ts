@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardCreateComponent } from './card-create/card-create.component';
 import { CardDetailComponent } from './main/card-detail/card-detail.component';
 import { CardComponent } from './main/card/card.component';
 
@@ -9,7 +10,9 @@ const routes: Routes = [
   { path: "cards", component: CardComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "cards/category/:category", component: CardComponent },
-  { path: "cards/:cardId", component: CardDetailComponent }
+  { path: "cards/create", component: CardCreateComponent},
+  { path: "cards/:cardId", component: CardDetailComponent },
+
 
 ]
 
