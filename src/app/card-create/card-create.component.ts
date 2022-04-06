@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Category } from '../models/category';
 import { CardService } from '../services/card.service';
@@ -14,7 +15,13 @@ export class CardCreateComponent implements OnInit {
 
   categories: Category[];
 
-  constructor(private categoryService: CategoryService, private cardService: CardService,private router: Router) { }
+  model: any = {
+    category:""
+  };
+
+
+
+  constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
 
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe(data => {
@@ -22,24 +29,29 @@ export class CardCreateComponent implements OnInit {
     })
   }
 
-  createCard(title: any, description: any, imageUrl: any, category: any) {
+  createCard() {
 
     const card = {
       id: 0,
-      title: title.value,
-      description: description.value,
+      title: this.model.title,
+      description: this.model.description,
       views: 0,
       comments: 0,
-      imageUrl: imageUrl.value,
-      category: category.value,
+      imageUrl: this.model.imageUrl,
+      category: this.model.category,
       isPopular: false,
       datePublished: new Date().getTime(),
 
     }
 
     this.cardService.createCard(card).subscribe(data => {
-      this.router.navigate(["cards",data.id])
+      this.router.navigate(["cards", data.id])
     })
+
+  }
+
+  log(value:any){
+    console.log(value)
 
   }
 
