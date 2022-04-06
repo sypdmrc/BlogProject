@@ -16,7 +16,7 @@
 
       <div class="form-group mb-2">
         <label class="form-label mb-1" for="description" id="description" name="description">Card Description</label>
-        <textarea required minlength="10" [(ngModel)]="model.description" class="form-control" type="text"
+        <textarea required minlength="10" [(ngModel)]="model.description" class="form-control" type="text" rows="6"
           id="description" #description="ngModel" name="description"></textarea>
         <div class="alert alert-danger mt-2" *ngIf="description.touched && description.invalid">
           <p *ngIf="description.errors?.['required']">Bu alan boş bırakılamaz</p>

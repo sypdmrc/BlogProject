@@ -31,7 +31,7 @@
 
 
   <div class="card cardItem" *ngFor="let item of FilteredCards">
-    <img class="card-img-top" src="{{item.imageUrl}}" alt="resim yok">
+    <img class="card-img-top" src="../../../../../assets/Images/{{item.imageUrl}}" alt="resim yok">
     <div class="card-body">
       <h4 class="card-title">{{item.title}}</h4>
       <p class="card-text line-clamp5">{{item.description | summary:400}}</p>
