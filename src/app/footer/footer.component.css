@@ -9,19 +9,16 @@ footer hr {
 }
 
 footer ul li a {
-  color: #fff;
+  color: black;
 }
 
 .footer_info {
   margin-top: 2rem;
 }
 
-.footer_info li a{
-  transition: color 0.5s;
-}
 
 .footer_info li a:hover {
-  color:  #0d6efd;
+  color:  #fff;
 
 
 
@@ -42,24 +39,20 @@ footer ul li a {
 
 }
 
-.footer_icons div a{
-  transition: color 0.5s;
-
-}
 
 .footer_icons div a:hover{
-  color:  #0d6efd;
+  color:  #fff;
 
 }
 
 
 .footer_icons i {
-  color: white;
+  color: black;
 }
 
 
 .footer_icons a {
-  color: #fff;
+  color: black;
   margin-left: 0.5rem;
 
 }
@@ -73,7 +66,7 @@ footer ul li a {
 }
 
 #textBottom{
-  color: rgb(236, 236, 236);
+  color: rgb(53, 53, 53);
 }
 
 
