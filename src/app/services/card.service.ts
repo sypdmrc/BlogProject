@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, tap, throwError } from "rxjs";
 import { Card } from "../models/card";
@@ -31,6 +31,23 @@ export class CardService {
       tap(data => console.log(data)),
       catchError(this.handleError),
     )
+  }
+
+
+  createCard(card: Card): Observable<Card> {
+
+    const httpOptions={
+      headers:new HttpHeaders({
+        "Content-type": "application/json",
+        "Authorization": "Token"
+      })
+    }
+
+    return this.http.post<Card>(this.url,card,httpOptions).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError),
+    )
+
   }
 
   private handleError(error: HttpErrorResponse) {

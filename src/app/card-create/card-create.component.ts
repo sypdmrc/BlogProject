@@ -21,7 +21,17 @@ export class CardCreateComponent implements OnInit {
   }
 
   createCard(title: any, description: any, imageUrl: any, category: any) {
-    console.log(title.value, description.value, imageUrl.value, category.value);
+
+    const card={
+      title:title.value,
+      description:description.value,
+      imageUrl:imageUrl.value,
+      category:category.value,
+      isPopular:false,
+      datePublished:new Date().getTime(),
+
+    }
+
   }
 
 }
