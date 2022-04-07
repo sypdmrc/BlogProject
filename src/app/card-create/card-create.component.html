@@ -1,24 +1,24 @@
 <div id="createCard" class="container mt-3">
 
-  <form (ngSubmit)="createCard()">
+  <form [formGroup]="cardForm" (ngSubmit)="createCard()">
 
       <h2 class="text-center mt-2">Create Card</h2>
 
       <div class="form-group mb-2">
         <label class="form-label mb-1" for="title" id="title" name="title">Card Title</label>
-        <input class="form-control" type="text" id="title" name="title" [formControl]="title">
+        <input class="form-control" type="text" id="title" name="title" formControlName="title">
 
       </div>
 
       <div class="form-group mb-2">
         <label class="form-label mb-1" for="description" id="description" name="description">Card Description</label>
-        <textarea class="form-control" type="text" rows="6" id="description" name="description" [formControl]="description"></textarea>
+        <textarea class="form-control" type="text" rows="6" id="description" name="description" formControlName="description"></textarea>
 
       </div>
 
       <div class="form-group mb-2">
         <label class="form-label mb-1" for="imageUrl" id="imageUrl" name="imageUrl">Card Image</label>
-        <input class="form-control" type="text" id="imageUrl" name="imageUrl" [formControl]="imageUrl">
+        <input class="form-control" type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl">
 
 
       </div>
@@ -26,7 +26,7 @@
 
       <div class="form-group mb-3">
         <label class="form-label mb-1" for="category" id="category" name="category">Card Category</label>
-        <select  name="category" id="category" class="form-select" [formControl]="category">
+        <select  name="category" id="category" class="form-select" formControlName="category">
           <option value="">Seçiniz</option>
           <option *ngFor="let item of categories" [value]="item.name">{{item.name | uppercase}}</option>
         </select>
@@ -34,7 +34,7 @@
       </div>
 
       <button type="submit" class="btn btn-primary">Create</button>
-      <button type="reset" class="btn btn-danger ms-md-2">Temizle</button>
+      <button class="btn btn-danger ms-md-2" (click)="clearForm()">Clear</button>
 
   </form>
 

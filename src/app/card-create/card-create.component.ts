@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Category } from '../models/category';
 import { CardService } from '../services/card.service';
@@ -19,10 +19,16 @@ export class CardCreateComponent implements OnInit {
     category: ""
   };
 
-  title = new FormControl("Card Title");
-  description = new FormControl("Card Description");
-  imageUrl = new FormControl("Card Image");
-  category = new FormControl("html");
+  cardForm = new FormGroup({
+
+    title: new FormControl("Card Title"),
+    description: new FormControl("Card Description"),
+    imageUrl: new FormControl("Card Image"),
+    category: new FormControl("html")
+
+
+  })
+
 
   constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
 
@@ -34,22 +40,26 @@ export class CardCreateComponent implements OnInit {
 
   createCard() {
 
-    const card = {
-      id: 0,
-      title: this.model.title,
-      description: this.model.description,
-      views: 0,
-      comments: 0,
-      imageUrl: this.model.imageUrl,
-      category: this.model.category,
-      isPopular: false,
-      datePublished: new Date().getTime(),
+    console.log(this.cardForm)
+    console.log(this.cardForm.value)
+    console.log(this.cardForm.value.title)
 
-    }
+    // const card = {
+    //   id: 0,
+    //   title: this.model.title,
+    //   description: this.model.description,
+    //   views: 0,
+    //   comments: 0,
+    //   imageUrl: this.model.imageUrl,
+    //   category: this.model.category,
+    //   isPopular: false,
+    //   datePublished: new Date().getTime(),
 
-    this.cardService.createCard(card).subscribe(data => {
-      this.router.navigate(["cards", data.id])
-    })
+    // }
+
+    // this.cardService.createCard(card).subscribe(data => {
+    //   this.router.navigate(["cards", data.id])
+    // })
 
   }
 
@@ -57,5 +67,21 @@ export class CardCreateComponent implements OnInit {
     console.log(value)
 
   }
+
+  clearForm(){
+
+    this.cardForm.patchValue({
+      title:"",
+      description:"",
+      imageUrl:"",
+      category:"",
+    })
+
+  }
+
+
+
+
+
 
 }
