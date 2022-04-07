@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Category } from '../models/category';
 import { CardService } from '../services/card.service';
@@ -21,13 +21,17 @@ export class CardCreateComponent implements OnInit {
 
   cardForm = new FormGroup({
 
-    title: new FormControl("Card Title"),
-    description: new FormControl("Card Description"),
-    imageUrl: new FormControl("Card Image"),
-    category: new FormControl("html")
+    title: new FormControl("", [Validators.required, Validators.minLength(5)]),
+    description: new FormControl("", [Validators.required]),
+    imageUrl: new FormControl("", [Validators.required]),
+    category: new FormControl("", [Validators.required])
 
 
   })
+
+  get title() {
+   return this.cardForm.get('title');
+  }
 
 
   constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
@@ -68,13 +72,13 @@ export class CardCreateComponent implements OnInit {
 
   }
 
-  clearForm(){
+  clearForm() {
 
     this.cardForm.patchValue({
-      title:"",
-      description:"",
-      imageUrl:"",
-      category:"",
+      title: "",
+      description: "",
+      imageUrl: "",
+      category: "",
     })
 
   }
