@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Category } from '../models/category';
 import { CardService } from '../services/card.service';
 import { CategoryService } from '../services/category.service';
+import { ImageValidator } from '../validators/image.validator';
 
 @Component({
   selector: 'app-card-create',
@@ -23,7 +24,7 @@ export class CardCreateComponent implements OnInit {
 
     title: new FormControl("", [Validators.required, Validators.minLength(5)]),
     description: new FormControl("", [Validators.required]),
-    imageUrl: new FormControl("", [Validators.required]),
+    imageUrl: new FormControl("", [Validators.required,ImageValidator.isValidExtension]),
     category: new FormControl("", [Validators.required])
 
 
@@ -32,6 +33,18 @@ export class CardCreateComponent implements OnInit {
   get title() {
    return this.cardForm.get('title');
   }
+
+  get description() {
+    return this.cardForm.get('description');
+   }
+
+   get imageUrl() {
+    return this.cardForm.get('imageUrl');
+   }
+
+   get category() {
+    return this.cardForm.get('category');
+   }
 
 
   constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
@@ -44,26 +57,22 @@ export class CardCreateComponent implements OnInit {
 
   createCard() {
 
-    console.log(this.cardForm)
-    console.log(this.cardForm.value)
-    console.log(this.cardForm.value.title)
+    const card = {
+      id: 0,
+      title: this.cardForm.value.title,
+      description: this.cardForm.value.description,
+      views: 0,
+      comments: 0,
+      imageUrl: this.cardForm.value.imageUrl,
+      category: this.cardForm.value.category,
+      isPopular: false,
+      datePublished: new Date().getTime(),
 
-    // const card = {
-    //   id: 0,
-    //   title: this.model.title,
-    //   description: this.model.description,
-    //   views: 0,
-    //   comments: 0,
-    //   imageUrl: this.model.imageUrl,
-    //   category: this.model.category,
-    //   isPopular: false,
-    //   datePublished: new Date().getTime(),
+    }
 
-    // }
-
-    // this.cardService.createCard(card).subscribe(data => {
-    //   this.router.navigate(["cards", data.id])
-    // })
+    this.cardService.createCard(card).subscribe(data => {
+      this.router.navigate(["cards", data.id])
+    })
 
   }
 

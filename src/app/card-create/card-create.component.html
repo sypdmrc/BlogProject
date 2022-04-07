@@ -19,16 +19,30 @@
     </div>
 
     <div class="form-group mb-2">
+
       <label class="form-label mb-1" for="description" id="description" name="description">Card Description</label>
-      <textarea class="form-control" type="text" rows="6" id="description" name="description"
-        formControlName="description"></textarea>
+      <textarea class="form-control" type="text" rows="6" id="description" name="description" formControlName="description"></textarea>
+
+        <div class="alert alert-danger mt-2" *ngIf="description.touched && description.invalid">
+
+          <p *ngIf="description.errors?.['required']">Bu alan boş bırakılamaz</p>
+          <p *ngIf="description.errors?.['minlength']">En az 5 karakter kullanılmalı</p>
+
+        </div>
 
     </div>
 
     <div class="form-group mb-2">
+
       <label class="form-label mb-1" for="imageUrl" id="imageUrl" name="imageUrl">Card Image</label>
       <input class="form-control" type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl">
 
+      <div class="alert alert-danger mt-2" *ngIf="imageUrl.touched && imageUrl.invalid">
+
+        <p *ngIf="imageUrl.errors?.['required']">Bu alan boş bırakılamaz</p>
+        <p *ngIf="imageUrl.errors?.['wrongExtension'] && imageUrl.value!==''">Yazdığınız url yanlış uzantı içeriyor.Lütfen geçerli bir uzantı giriniz(".jpeg",".jpg",".png")</p>
+
+      </div>
 
     </div>
 
@@ -39,6 +53,13 @@
         <option value="">Seçiniz</option>
         <option *ngFor="let item of categories" [value]="item.name">{{item.name | uppercase}}</option>
       </select>
+
+      <div class="alert alert-danger mt-2" *ngIf="category.touched && category.invalid">
+
+        <p *ngIf="category.errors?.['required']">Bu alan boş bırakılamaz</p>
+        <p *ngIf="category.errors?.['minlength']">En az 5 karakter kullanılmalı</p>
+
+      </div>
 
     </div>
 
