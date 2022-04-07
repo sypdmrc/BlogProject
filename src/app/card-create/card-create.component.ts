@@ -23,28 +23,28 @@ export class CardCreateComponent implements OnInit {
   cardForm = new FormGroup({
 
     title: new FormControl("", [Validators.required, Validators.minLength(5)]),
-    description: new FormControl("", [Validators.required]),
-    imageUrl: new FormControl("", [Validators.required,ImageValidator.isValidExtension]),
+    description: new FormControl("", [Validators.required, Validators.minLength(10)]),
+    imageUrl: new FormControl("", [Validators.required, ImageValidator.isValidExtension]),
     category: new FormControl("", [Validators.required])
 
 
   })
 
   get title() {
-   return this.cardForm.get('title');
+    return this.cardForm.get('title');
   }
 
   get description() {
     return this.cardForm.get('description');
-   }
+  }
 
-   get imageUrl() {
+  get imageUrl() {
     return this.cardForm.get('imageUrl');
-   }
+  }
 
-   get category() {
+  get category() {
     return this.cardForm.get('category');
-   }
+  }
 
 
   constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
@@ -54,6 +54,17 @@ export class CardCreateComponent implements OnInit {
       this.categories = data;
     })
   }
+
+  // clearForm() {
+
+  //   this.cardForm.patchValue({
+  //     title: "",
+  //     description: "",
+  //     imageUrl: "",
+  //     category: "",
+  //   })
+
+  // }
 
   createCard() {
 
@@ -70,6 +81,7 @@ export class CardCreateComponent implements OnInit {
 
     }
 
+
     this.cardService.createCard(card).subscribe(data => {
       this.router.navigate(["cards", data.id])
     })
@@ -81,16 +93,7 @@ export class CardCreateComponent implements OnInit {
 
   }
 
-  clearForm() {
 
-    this.cardForm.patchValue({
-      title: "",
-      description: "",
-      imageUrl: "",
-      category: "",
-    })
-
-  }
 
 
 

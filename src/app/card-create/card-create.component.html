@@ -26,7 +26,7 @@
         <div class="alert alert-danger mt-2" *ngIf="description.touched && description.invalid">
 
           <p *ngIf="description.errors?.['required']">Bu alan boş bırakılamaz</p>
-          <p *ngIf="description.errors?.['minlength']">En az 5 karakter kullanılmalı</p>
+          <p *ngIf="description.errors?.['minlength']">En az 10 karakter kullanılmalı</p>
 
         </div>
 
@@ -63,10 +63,12 @@
 
     </div>
 
-    <button type="submit" class="btn btn-primary">Create</button>
-    <button class="btn btn-danger ms-md-2" (click)="clearForm()">Clear</button>
+    <button [disabled]="cardForm.invalid" type="submit" class="btn btn-primary">Create</button>
 
+    <button type="reset" class="btn btn-danger ms-2">Clear</button>
+    <!-- (click)="clearForm()" -->
   </form>
+
 
 
 </div>
