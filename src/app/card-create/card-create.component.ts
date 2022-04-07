@@ -55,16 +55,18 @@ export class CardCreateComponent implements OnInit {
     })
   }
 
-  // clearForm() {
+  clearForm() {
 
-  //   this.cardForm.patchValue({
-  //     title: "",
-  //     description: "",
-  //     imageUrl: "",
-  //     category: "",
-  //   })
+    this.cardForm.patchValue({
+      title: "",
+      description: "",
+      imageUrl: "",
+      category: "",
+    })
 
-  // }
+
+
+  }
 
   createCard() {
 

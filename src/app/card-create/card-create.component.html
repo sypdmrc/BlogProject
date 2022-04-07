@@ -65,8 +65,8 @@
 
     <button [disabled]="cardForm.invalid" type="submit" class="btn btn-primary">Create</button>
 
-    <button type="reset" class="btn btn-danger ms-2">Clear</button>
-    <!-- (click)="clearForm()" -->
+    <button type="reset" class="btn btn-danger ms-2" (click)="clearForm()">Clear</button>
+
   </form>
 
 
