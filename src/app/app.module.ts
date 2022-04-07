@@ -12,7 +12,7 @@ import { VisitedComponent } from './main/visited/visited.component';
 import { CloudComponent } from './main/cloud/cloud.component';
 import { CategoriesComponent } from './main/categories/categories.component';
 import { SummaryPipe } from './pipes/summary.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardFilterPipe } from './pipes/card-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -46,7 +46,7 @@ import { CardCreateComponent } from './card-create/card-create.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-
+    ReactiveFormsModule,
 
   ],
   providers: [

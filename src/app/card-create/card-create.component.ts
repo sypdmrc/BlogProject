@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Category } from '../models/category';
 import { CardService } from '../services/card.service';
@@ -15,10 +16,13 @@ export class CardCreateComponent implements OnInit {
   categories: Category[];
 
   model: any = {
-    category:""
+    category: ""
   };
 
-
+  title = new FormControl("Card Title");
+  description = new FormControl("Card Description");
+  imageUrl = new FormControl("Card Image");
+  category = new FormControl("html");
 
   constructor(private categoryService: CategoryService, private cardService: CardService, private router: Router) { }
 
@@ -49,7 +53,7 @@ export class CardCreateComponent implements OnInit {
 
   }
 
-  log(value:any){
+  log(value: any) {
     console.log(value)
 
   }
