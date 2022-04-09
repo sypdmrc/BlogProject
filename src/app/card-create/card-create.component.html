@@ -40,6 +40,7 @@
       <div class="alert alert-danger mt-2" *ngIf="imageUrl.touched && imageUrl.invalid">
 
         <p *ngIf="imageUrl.errors?.['required']">Bu alan boş bırakılamaz</p>
+
         <p *ngIf="imageUrl.errors?.['wrongExtension'] && imageUrl.value!==''">Yazdığınız url yanlış uzantı içeriyor.Lütfen geçerli bir uzantı giriniz(".jpeg",".jpg",".png")</p>
 
       </div>
